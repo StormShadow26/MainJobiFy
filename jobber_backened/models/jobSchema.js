@@ -58,6 +58,10 @@ const jobSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  marked:{
+    type:Boolean,
+    default:false,
+  }
 });
 
 module.exports = mongoose.model("Job", jobSchema);
