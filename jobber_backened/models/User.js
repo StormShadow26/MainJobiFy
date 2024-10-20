@@ -85,7 +85,7 @@ const userSchema = new mongoose.Schema({
     description: "The password for user authentication (minimum 8 characters)",
   },
   jobsInterested: {
-    type: Array,
+    type: [String],  // Specify the type of array elements
     default: [],
     description: "A list of jobs the user is interested in, starting as an empty array",
   },
@@ -110,9 +110,18 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
       },
+
+
     },
   ],
-
+  cnt: {
+    type:Number,  // 'int' is not a valid type in Mongoose; use 'Number'
+    default: 0,
+  },
+  amount: {
+    type: Number,  // 'int' is not a valid type; use 'Number'
+    default: 100,
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

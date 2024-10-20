@@ -36,6 +36,8 @@ const loginUser = async (req, res) => {
         pan: existingUser.pan,
         jobsInterested: existingUser.jobsInterested,
         reviews: existingUser.reviews,
+        cnt:existingUser.cnt,
+
       },
     });
   } catch (error) {

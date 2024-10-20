@@ -40,7 +40,8 @@ const registerUser = async (req, res) => {
       pan,
       password: hashedPassword, // Store the hashed password
       jobsInterested: [], // Initially empty
-      reviews: [] // Initially empty
+      reviews: [] ,
+      cnt:0,              // Initially empty
     });
 
     // Save the user to the database

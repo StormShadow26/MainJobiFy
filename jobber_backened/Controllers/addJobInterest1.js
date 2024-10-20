@@ -2,13 +2,13 @@ const User = require('../models/User'); // Assuming the user model is in this pa
 const Job = require('../models/jobSchema'); // Assuming the job model is in this path
 
 // Controller function to add a job ID to the user's jobsInterested field
-const addJobInterest = async (req, res) => {
+const addJobInterest1 = async (req, res) => {
   try {
-    const { amount,email, jobId } = req.body; // Assuming the request contains email and jobId
+    const { amount,email} = req.body; // Assuming the request contains email and jobId
 
     // Validate if the email and jobId are provided
-    if (!email || !jobId) {
-      return res.status(400).json({ error: 'Email and jobId are required' });
+    if (!email ) {
+      return res.status(400).json({ error: 'Email  required' });
     }
 
     // Find the user by their email
@@ -18,7 +18,7 @@ const addJobInterest = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    user.amount=user.amount+amount;
+    user.amount=user.amount-amount;
 
     // Check if the job exists
     // const job = await Job.findById(jobId);
@@ -27,13 +27,9 @@ const addJobInterest = async (req, res) => {
     //   return res.status(404).json({ error: 'Job not found' });
     // }
 
-    // Check if the job is already in the user's jobsInterested array
-    if (user.jobsInterested.includes(jobId)) {
-      return res.status(400).json({ error: 'User has already shown interest in this job' });
-    }
+   
 
-    // Add the jobId to the user's jobsInterested field
-    user.jobsInterested.push(jobId);
+    
 
     // Save the updated user
     await user.save();
@@ -47,5 +43,5 @@ const addJobInterest = async (req, res) => {
 };
 
 module.exports = {
-  addJobInterest,
+  addJobInterest1,
 };
