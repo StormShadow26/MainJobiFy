@@ -11,6 +11,7 @@ const { addJobInterest } = require('../Controllers/addJobInterest');
 const getUserByEmail = require('../Controllers/getUserByEmail');
 const {addJobInterest1}=require('../Controllers/addJobInterest1')
 const User = require('../models/User');
+const Votes=require('../Controllers/Votes');
 
 // POST request to register a user
 router.post('/register', registerUser);
@@ -23,6 +24,11 @@ router.put('/yourwork', addJobInterest);
 router.put('/yourwork1', addJobInterest1);
 router.get('/getuser/:email', getUserByEmail);
 router.put("/markjob1/:jobId", markJobAsTrue1);
+// Route to upvote a job
+router.put('/upvote/:jobId', Votes.upvoteJob);
+
+// Route to downvote a job
+router.put('/downvote/:jobId', Votes.downvoteJob);
 
 
 

@@ -22,7 +22,7 @@ const jobSchema = new mongoose.Schema({
     trim: true,
   },
   salary: {
-    type:  Number,
+    type: Number,
     required: true,
   },
   role: {
@@ -58,18 +58,27 @@ const jobSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  marked:{
-    type:Boolean,
-    default:false,
+  marked: {
+    type: Boolean,
+    default: false,
   },
-  issued:{
-    type:Boolean,
-    default:false,
+  issued: {
+    type: Boolean,
+    default: false,
   },
-  deadline:{
-    type:Number,
-    required:true,
-    message:"Add number of deadline days",
+  deadline: {
+    type: Number,
+    required: true,
+    message: "Add number of deadline days",
+  },
+  upvote: {
+    type: Number,
+    default: 0,
+  },
+  downvote: {
+    type: Number,
+    default: 0,
+
   }
 });
 
