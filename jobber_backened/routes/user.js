@@ -6,6 +6,7 @@ const { getAllJobs } = require('../Controllers/getAllJobs');
 const { createJob } = require('../Controllers/createJob');
 const { InterestedCandidates } = require('../Controllers/InterestedCandidates');
 const { markJobAsTrue } = require('../Controllers/markJobAsTrue');
+const { markJobAsTrue1 } = require('../Controllers/markJobAsTrue1');
 const { addJobInterest } = require('../Controllers/addJobInterest');
 const getUserByEmail = require('../Controllers/getUserByEmail');
 const {addJobInterest1}=require('../Controllers/addJobInterest1')
@@ -21,6 +22,7 @@ router.put("/markjob/:jobId", markJobAsTrue);
 router.put('/yourwork', addJobInterest);
 router.put('/yourwork1', addJobInterest1);
 router.get('/getuser/:email', getUserByEmail);
+router.put("/markjob1/:jobId", markJobAsTrue1);
 
 
 

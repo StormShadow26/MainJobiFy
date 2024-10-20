@@ -3,10 +3,10 @@ const Job = require("../models/jobSchema"); // Import InterestedJob schema
 
 exports.createJob = async (req, res) => {
   try {
-    const { jobTitle, company, email, salary, role, workType, description, requirements } = req.body;
+    const { jobTitle, company, email, salary, role, workType, description, requirements,deadline } = req.body;
 
     // Validate required fields
-    if (!jobTitle || !company || !email || !role || !workType || !description) {
+    if (!jobTitle || !company || !email || !role || !workType || !description || !deadline) {
       return res.status(400).json({
         status: 400,
         message: "Please fill all required fields",
@@ -23,6 +23,7 @@ exports.createJob = async (req, res) => {
       workType,
       description,
       requirements,
+      deadline,
     });
 
     // Create an entry in InterestedJob for tracking candidate interest

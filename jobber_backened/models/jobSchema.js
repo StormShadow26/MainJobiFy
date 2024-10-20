@@ -61,6 +61,15 @@ const jobSchema = new mongoose.Schema({
   marked:{
     type:Boolean,
     default:false,
+  },
+  issued:{
+    type:Boolean,
+    default:false,
+  },
+  deadline:{
+    type:Number,
+    required:true,
+    message:"Add number of deadline days",
   }
 });
 
