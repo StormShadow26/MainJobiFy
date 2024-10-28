@@ -1,5 +1,5 @@
 # Introduction-
-JobiFy is an amazing platform that provides the freelancers an interactive place to look for their preferred work and also to the employers to put up the jobs they wish to be done.Our main job is to provide a securatised way of payments using EVM technology and encrypting them in the form of JOBIFY Tokens.
+JobiFy is an amazing platform that provides the freelancers an interactive place to look for their preferred work and also to the employers to put up the jobs they wish to be done.Our main job is to provide a securatised way of payments using EVM technology and encrypting them in the form of JOBIFY Tokens.[See the Presentation](https://www.canva.com/design/DAGU1IMa7YI/DLF1sLCop2r93ihI6AyGeQ/view?utm_content=DAGU1IMa7YI&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 The key features of JobiFy are:
 
